@@ -46,27 +46,44 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 1fr 50vh;
-    gap: 75px;
+    gap: 20px;
     justify-items: start;
 
     color: #fefefe;
 }
 
-.sidebar #dashboard {
+#dashboard {
     grid-row: 1;
+    font-size: 30px;
+    padding: 0.5em;
 }
 
-.sidebar .navigation {
+.navigation {
     grid-row: 2 / 3;
 }
 
-.sidebar .branding {
+.branding {
     grid-row: 3 / 4;
 }
-
-.sidebar .navigation, .sidebar .branding {
-    padding: 1rem;
+#dashboard img, .navigation img, .branding img {
+    width: 1em;
+    height: 1em;
+    vertical-align: baseline;
 }
+
+.navigation, .branding {
+    padding: 1em;
+    font-size: 20px;
+}
+
+.navigation > div, .branding > div {
+    margin: 1em 0;
+}
+
+.filter-sidebar-font-color {
+    filter: invert(100%) sepia(0%) saturate(18%) hue-rotate(60deg) brightness(107%) contrast(105%);
+}
+/* codepen.io/sosuke/pen/Pjoqqp */
 
 .main-content {
     background-color: #e1e8f0;
