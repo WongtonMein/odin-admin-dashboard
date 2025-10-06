@@ -206,14 +206,23 @@ body {
     grid-row: 2 / 3;
 
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 350px;
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
 
     padding: 30px 20px;
 }
 
-.project-section {
+.section-header {
+    font-size: 1.3em;
+    /* font-weight: bold; */
+}
+
+.main-content-container {
+    gap: 10px;
+}
+
+.project-container {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 
@@ -230,16 +239,51 @@ body {
     grid-row: 2 / 3;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(200px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, .7fr));
+    /* grid-template-columns: repeat(auto-fit, 300px); */
+    /* grid-template-rows: repeat(200px); */
+    grid-template-rows: repeat(auto-fill, 300px);
     gap: 20px;
 }
 
 .individual-project {
     background-color: white;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
     border-radius: 10px;
     border-left: 0.5em solid #efb428;
+    box-shadow: 0 5px lightgray; 
+    /* apply box-shadow: 0 5px lightgray; to projects, announcements, trending */
+
+    display: grid;
+    grid-template-rows: 2em 1fr 2em;
+    gap: 5px;
+}
+
+.individual-project:hover {
+    box-shadow: 0 5px 5px 5px gray;
+}
+
+.project-title {
+    grid-row: 1 / 2;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.project-description {
+    grid-row: 2 / 3;
+    color: gray;
+    overflow: auto;
+}
+
+.project-buttons {
+    grid-row: 3 / 4;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+    justify-self: flex-end;
+    align-content: end;
 }
 
 .announcements {
@@ -250,6 +294,11 @@ body {
 .trending {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+}
+
+.trending-user-img {
+    width: 1em;
+    height: 1em;
 }
 
 /* #endregion */
