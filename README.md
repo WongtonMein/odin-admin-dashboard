@@ -5,4 +5,6 @@ TOP - Project: Admin Dashboard
  - Have fun
 
 Challenges:
- - TBD
+ - Aligning image elements with text elements (used Flexbox)
+ - Setting proper tile sizes (selected the wrong classes)
+ - Text overflow in the "Announcements" section
